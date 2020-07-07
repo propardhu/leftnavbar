@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>login</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</head>
+
+<body>
+
+	<nav class=" navbar navbar-expand-lg navbar-dark fixed-top M">
+	<a class="navbar-brand" href="#">My School</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+		aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse navi" id="navbarSupportedContent-4">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+           notications
+          <span class="sr-only"></span>
+        </a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+           Settings
+          <span class="sr-only"></span>
+        </a>
+			</li>
+
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-user"></i> Profile </a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+					<a class="dropdown-item" href="#">My account</a>
+					<a class="dropdown-item" href="#">Log out</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	</nav>
+
+
+
+
+
+	<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">Admin</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    <!--  <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+				<div class="B">
+
+
+        <div class="user-role">Ram
+          <span class="user-role">
+            <strong>Principal</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+
+        </div></div>
+      </div>-->
+      <!-- sidebar-header  -->
+      <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Admin
+                    <span class="badge badge-pill badge-success">Pro</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Students</a>
+                </li>
+                <li>
+                  <a href="#">parents</a>
+                </li>
+								<li>
+                  <a href="#">Teachers</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-child"></i>
+              <span>Students</span>
+
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">All Teachers
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Teacher Details</a>
+                </li>
+                <li>
+                  <a href="#">Add Teacher</a>
+                </li>
+								<li>
+                  <a href="#">Payment</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="far fa-user"></i>
+              <span>Parents</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">All Parents</a>
+                </li>
+                <li>
+                  <a href="#">Parents Details</a>
+                </li>
+                <li>
+                  <a href="#">Add Parents</a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Library</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Add Book</a>
+                </li>
+                <li>
+                  <a href="#">Add New Book</a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Acconunt</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">All Fees Collection</a>
+                </li>
+                <li>
+                  <a href="#">Expenses</a>
+                </li>
+								<li>
+                  <a href="#">Add Expenses</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Class</span>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#">All Classes</a>
+									</li>
+									<li>
+										<a href="#">Add New Classes</a>
+									</li>
+								</ul>
+							</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Subject</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Class Routine</span>
+            </a>
+          </li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Attendence</span>
+            </a>
+          </li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Exam</span>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#">Exam Schedule</a>
+									</li>
+									<li>
+										<a href="#">Exam Grades</a>
+									</li>
+								</ul>
+							</div>
+            </a>
+          </li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Transport</span>
+            </a>
+          </li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Hostel</span>
+            </a>
+          </li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Notice</span>
+            </a>
+          </li>
+					<li>
+						<a href="#">
+							<i class="fa fa-folder"></i>
+							<span>Messeage</span>
+						</a>
+					</li>
+					<li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>UI Elements</span>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#">Alart</a>
+									</li>
+									<li>
+										<a href="#">Button</a>
+									</li>
+									<li>
+										<a href="#">Grid</a>
+									</li>
+									<li>
+										<a href="#">Model</a>
+									</li>
+									<li>
+										<a href="#">progress bar</a>
+									</li>
+									<li>
+										<a href="#">Tab</a>
+									</li>
+									<li>
+										<a href="#">Widget</a>
+									</li>
+								</ul>
+							</div>
+            </a>
+          </li>
+					<li>
+						<a href="#">
+							<i class="fa fa-folder"></i>
+							<span>Map</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-folder"></i>
+							<span>Account</span>
+						</a><br><br><br><br>
+					</li>
+
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+
+  </nav>
+
+
+  <!-- page-content" -->
+
+	<main class="page-content">
+    <div class="container-fluid">
+<br>
+<div class="row">
+	<div class="col-4-xxxl col-12 p-3">
+		<div class="card height-auto">
+			<h4 class="px-4 py-4"><b>Create A Notice</b></h4>
+			<div class="card-body px-lg-5 pt-0">
+
+				<br>
+				<form class="" action="" method="">
+					<div class="row">
+						<div class="col-12-xxxl col-lg-6 col-12 form-group">
+
+							<div class="md-form mt-3">
+							<input type="text" id="materialContactFormName" class="form-control">
+							<label for="materialContactFormName">Title</label>
+					</div>
+
+						</div>
+						<div class="col-12-xxxl col-lg-6 col-12 form-group">
+							<div class="md-form mt-3">
+	                <input type="text" id="materialContactFormName" class="form-control">
+	                <label for="materialContactFormName">Details</label>
+	            </div>
+						</div>
+
+						<div class="col-12-xxxl col-lg-6 col-12 form-group">
+							<div class="md-form mt-3">
+									<input type="text" id="materialContactFormName" class="form-control">
+									<label for="materialContactFormName"><i class="fas fa-user"></i>Posted By</label>
+
+							</div>
+						</div>
+
+						<div class="col-12-xxxl col-lg-6 col-12 form-group">
+							<div class="form-group">
+  										<span>Date</span>
+    									<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+  						</div>
+						</div>
+
+						<div class="col-12 form-group mg-t-8">
+								<button type="submit" class="btn blue-gradient">Next</button>
+						</div>
+
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+<br><br>
+<div class="col-8-xxxl col-12 p-3">
+	<div class="card height-auto">
+		<div class="card-body">
+
+			<h4 class="px-3 py-4">Notice Board</h4>
+
+			<form class="" action="" method="">
+				<div class="row">
+					<div class="col-lg-5 col-12 form-group">
+						<input type="text" id="defaultLoginFormEmail" class="form-control mb-4 mx-3" placeholder="Search by Date..">
+					</div>
+
+					<div class="col-lg-5 col-12 form-group">
+						<input type="text" id="defaultLoginFormEmail" class="form-control mb-4 mx-3" placeholder="Search by Title..">
+					</div>
+
+					<div class="col-lg-2 col-12 form-group">
+
+						<button type="button" class="btn btn-warning m-0">Search</button>
+
+					</div>
+
+				</div>
+			</form>
+
+			<ul class="list-group list-group-flush ">
+  			<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>
+</div>
+
+</div>
+
+  </main>
+
+
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+	<script src="index.js">
+
+	</script>
+</body>
+
+</html>
