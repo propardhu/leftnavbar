@@ -48,6 +48,11 @@ function check(){
         check[i].checked=true;
       }
   }
+  if(maincheck.checked==false){
+      for(var i=0;i<check.length;i++){
+        check[i].checked=false;
+      }
+  }
 }
 
 var ctxD = document.getElementById("doughnutChart").getContext('2d');
