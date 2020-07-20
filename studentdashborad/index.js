@@ -50,21 +50,29 @@ function check(){
   }
 }
 
-var ctxD = document.getElementById("doughnutChart").getContext('2d');
-var myLineChart = new Chart(ctxD, {
-type: 'doughnut',
-data: {
-labels: [ "absent","present"],
-datasets: [{
-data: [14,86],
-backgroundColor: [ "#46BFBD", "#FDB45C"],
-hoverBackgroundColor: ["#5AD3D1", "#FFC870"]
-}]
-},
-options: {
-responsive: true
-}
+
+
+new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Present","Absent"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: [ "#8e5ea2","#3cba9f"],
+          data: [14,86]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
 });
+
+
 
 let today = new Date();
 let currentMonth = today.getMonth();
