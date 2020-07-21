@@ -1,0 +1,644 @@
+<html lang="en" dir="ltr">
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AdminDashboard</title>
+  <link rel="stylesheet" href="css/Admindash.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</head>
+
+<body>
+
+  <nav class=" navbar navbar-expand-lg navbar-dark fixed-top M">
+    <a class="navbar-brand" href="#">My School</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navi" id="navbarSupportedContent-4">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            notications
+            <span class="sr-only"></span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Settings
+            <span class="sr-only"></span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> Profile </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+            <a class="dropdown-item" href="#">My account</a>
+            <a class="dropdown-item" href="#">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+  <div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a href="#">Admin</a>
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!--  <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+				<div class="B">
+
+
+        <div class="user-role">Ram
+          <span class="user-role">
+            <strong>Principal</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+
+        </div></div>
+      </div>-->
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Search...">
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Admin
+                      <span class="badge badge-pill badge-success">Pro</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Students</a>
+                  </li>
+                  <li>
+                    <a href="#">parents</a>
+                  </li>
+                  <li>
+                    <a href="#">Teachers</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-child"></i>
+                <span>Students</span>
+
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">All Teachers
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Teacher Details</a>
+                  </li>
+                  <li>
+                    <a href="#">Add Teacher</a>
+                  </li>
+                  <li>
+                    <a href="#">Payment</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="far fa-user"></i>
+                <span>Parents</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">All Parents</a>
+                  </li>
+                  <li>
+                    <a href="#">Parents Details</a>
+                  </li>
+                  <li>
+                    <a href="#">Add Parents</a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-book"></i>
+                <span>Library</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Add Book</a>
+                  </li>
+                  <li>
+                    <a href="#">Add New Book</a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-globe"></i>
+                <span>Acconunt</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">All Fees Collection</a>
+                  </li>
+                  <li>
+                    <a href="#">Expenses</a>
+                  </li>
+                  <li>
+                    <a href="#">Add Expenses</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa fa-book"></i>
+                <span>Class</span>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+                      <a href="#">All Classes</a>
+                    </li>
+                    <li>
+                      <a href="#">Add New Classes</a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-calendar"></i>
+                <span>Subject</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Class Routine</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Attendence</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Exam</span>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+                      <a href="#">Exam Schedule</a>
+                    </li>
+                    <li>
+                      <a href="#">Exam Grades</a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Transport</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Hostel</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Notice</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Messeage</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>UI Elements</span>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+                      <a href="#">Alart</a>
+                    </li>
+                    <li>
+                      <a href="#">Button</a>
+                    </li>
+                    <li>
+                      <a href="#">Grid</a>
+                    </li>
+                    <li>
+                      <a href="#">Model</a>
+                    </li>
+                    <li>
+                      <a href="#">progress bar</a>
+                    </li>
+                    <li>
+                      <a href="#">Tab</a>
+                    </li>
+                    <li>
+                      <a href="#">Widget</a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Map</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Account</span>
+              </a><br><br><br><br>
+            </li>
+
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+
+    </nav>
+
+
+    <!-- page-content" -->
+
+    <main class="page-content">
+      <div class="row">
+
+        <div class="col-xl-3 col-sm-6 col-12 ">
+          <div class="card height-auto p-3" style="text-align: center;">
+            <div class="row ">
+              <div class="col-6 ">
+                  <img src="user2.jpg" class="rounded-circle " alt="....">
+              </div>
+
+
+              <div class="col-6">
+                <h6 style="color:#cccccc;" >Students</h6>
+                <h4><b>150000</b></h4>
+              </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12 ">
+          <div class="card height-auto p-3" style="text-align: center;">
+            <div class="row ">
+              <div class="col-6 ">
+                  <img src="user2.jpg" class="rounded-circle " alt="....">
+              </div>
+
+
+              <div class="col-6">
+                <h6 style="color:#cccccc;" >Teachers</h6>
+                <h4><b>2250</b></h4>
+              </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12 ">
+          <div class="card height-auto p-3" style="text-align: center;">
+            <div class="row ">
+              <div class="col-6 ">
+                  <img src="user2.jpg" class="rounded-circle " alt="....">
+              </div>
+
+
+              <div class="col-6">
+                <h6 style="color:#cccccc;" >Parents</h6>
+                <h4><b>5690</b></h4>
+              </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12 ">
+          <div class="card height-auto p-3" style="text-align: center;">
+            <div class="row ">
+              <div class="col-6 ">
+                  <img src="user2.jpg" class="rounded-circle " alt="....">
+              </div>
+
+
+              <div class="col-6">
+                <h6 style="color:#cccccc;" >Earnings</h6>
+                <h4><b>193000</b></h4>
+              </div>
+            </div>
+
+            </div>
+        </div>
+
+<div class="row">
+
+
+<div class="col-12 col-xl-8 col-6-xxxl p-3">
+  <div class="card height-auto pb-5" >
+    <h4 class="px-4 py-4"><b>Earnings</b></h4>
+    <canvas id="line-chart" class="p-3 pb-5" width="800" height="450"></canvas>
+  </div>
+</div>
+
+<div class="col-12 col-xl-4 col-3-xxxl p-3">
+  <div class="card height-auto pb-5" >
+    <h4 class="px-4 py-4"><b>Expences</b></h4>
+    <canvas id="bar-chart" class="p-3" width="800" height="450"></canvas>
+  </div>
+</div>
+</div>
+
+<div class="col-12 col-xl-6 col-3-xxxl">
+  <div class="card height-auto pb-5 ">
+    <h4 class="px-4 py-4"><b>Attendence</b></h4>
+      <canvas id="doughnut-chart" width="800" height="450"></canvas>
+
+  </div>
+
+
+</div>
+
+<div class="col-4-xxxl col-xl-6 col-12 w-75 mt-3">
+  <div class="card height-auto">
+    <div id="calendar">
+
+
+        <h3 class="card-header" id="monthAndYear"></h3>
+        <table class="table table-bordered table-responsive-sm" id="calendar">
+            <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            </thead>
+
+            <tbody id="calendar-body">
+
+            </tbody>
+        </table>
+
+        <div class="form-inline">
+
+            <button class="btn btn-outline-primary col-sm-5" id="previous" onclick="previous()">Previous</button>
+
+            <button class="btn btn-outline-primary col-sm-5" id="next" onclick="next()">Next</button>
+        </div>
+        <br/>
+        <form class="form-inline">
+            <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+            </select>
+
+
+            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+            <option value=1990>1990</option>
+            <option value=1991>1991</option>
+            <option value=1992>1992</option>
+            <option value=1993>1993</option>
+            <option value=1994>1994</option>
+            <option value=1995>1995</option>
+            <option value=1996>1996</option>
+            <option value=1997>1997</option>
+            <option value=1998>1998</option>
+            <option value=1999>1999</option>
+            <option value=2000>2000</option>
+            <option value=2001>2001</option>
+            <option value=2002>2002</option>
+            <option value=2003>2003</option>
+            <option value=2004>2004</option>
+            <option value=2005>2005</option>
+            <option value=2006>2006</option>
+            <option value=2007>2007</option>
+            <option value=2008>2008</option>
+            <option value=2009>2009</option>
+            <option value=2010>2010</option>
+            <option value=2011>2011</option>
+            <option value=2012>2012</option>
+            <option value=2013>2013</option>
+            <option value=2014>2014</option>
+            <option value=2015>2015</option>
+            <option value=2016>2016</option>
+            <option value=2017>2017</option>
+            <option value=2018>2018</option>
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+            <option value=2021>2021</option>
+            <option value=2022>2022</option>
+            <option value=2023>2023</option>
+            <option value=2024>2024</option>
+            <option value=2025>2025</option>
+            <option value=2026>2026</option>
+            <option value=2027>2027</option>
+            <option value=2028>2028</option>
+            <option value=2029>2029</option>
+            <option value=2030>2030</option>
+        </select></form>
+
+
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="scripts.js"></script>
+
+<!-- Optional JavaScript for bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+
+
+	  </div>
+
+  </div>
+
+</div>
+
+<div class="col-lg-6 col-xl-6 col-4-xxxl mt-3">
+  <div class="card height-auto pb-5 ">
+    <h4 class="px-4 py-4"><b>Website Traffic</b></h4>
+      <canvas id="mixed-chart" width="800" height="450"></canvas>
+
+  </div>
+
+
+</div>
+
+
+<div class="col-lg-6 col-xl-6 col-4-xxxl p-3">
+  <div class="card height-auto">
+    <div class="card-body"   >
+
+			<h4 class="px-3 py-4">Notifications</h4>
+
+
+
+			<ul class="list-group list-group-flush " style="max-height: 220px; overflow-y: scroll; padding-right: 20px;">
+  			<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+				<li class="list-group-item"><div class="tim">
+					16 June, 2019 <br>
+  			</div><br>Great School Great School manag mene esom text of the printing Great School manag mene esom text of the printing manag mene esom text of the printing.</li>
+			</ul>
+
+		</div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+      </div>
+
+    </main>
+
+
+  </div>
+  <!-- page-wrapper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/Admindash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</body>
+
+</html>
