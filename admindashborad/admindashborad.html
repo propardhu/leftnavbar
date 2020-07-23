@@ -6,6 +6,7 @@
   <title>AdminDashboard</title>
   <link rel="stylesheet" href="css/Admindash.css">
   <link href="css/peach.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -33,7 +34,7 @@
 
   <nav class=" navbar navbar-expand-lg navbar-dark fixed-top M">
     <a class="navbar-brand" href="#">My School</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"  aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navi" id="navbarSupportedContent-4">
@@ -424,33 +425,33 @@
 
 
 <div class="col-12 col-xl-8 col-6-xxxl p-3">
-  <div class="card height-auto pb-5" >
-    <h4 class="px-4 py-4"><b>Earnings</b></h4>
-    <canvas id="line-chart" class="p-3 pb-5" width="800" height="450"></canvas>
+  <div class="card  pb-5 earngraph" style="height:400px;  overflow-y: scroll; ">
+    <h4 class="px-4 py-4" style="position:sticky; top:0; background:#ffffff;"><b>Earnings</b></h4>
+    <canvas id="line-chart" class="p-3 pb-5" width="50" height="50" ></canvas>
   </div>
 </div>
 
-<div class="col-12 col-xl-4 col-3-xxxl p-3">
-  <div class="card height-auto pb-5" >
-    <h4 class="px-4 py-4"><b>Expences</b></h4><br><br>
-    <canvas id="bar-chart" class="p-3" ></canvas>
+<div class="col-12 col-xl-4 col-3-xxxl p-3 ">
+  <div class=" card  pb-5 expencegraph"  style="height: 402px;   overflow-y: scroll; ">
+    <h4 class="px-4 py-4" style="position:sticky; top:0; background:#ffffff;"><b>Expences</b></h4><br><br>
+    <canvas id="bar-chart" class="p-3" width="500" height="500"></canvas>
   </div>
 </div>
 </div>
 
 <div class="col-12 col-xl-6 col-3-xxxl">
-  <div class="card height-auto pb-5 " style="height:400px;">
+  <div class="card height-auto pb-5 mt-2" style="height: 402px ">
     <h4 class="px-4 py-4"><b>Attendence</b></h4>
-      <canvas id="doughnut-chart" width="800" height="450"></canvas>
+      <canvas id="doughnut-chart"  style="overflow-y: scroll;"></canvas>
 
   </div>
 
 
 </div>
 
-<div class="col-4-xxxl col-xl-6 col-12 w-50 mt-2">
+<div class="col-4-xxxl height-auto col-xl-6 col-12 w-50 mt-2">
   <div class="card" style="height: 402px; overflow-y: scroll; ">
-    <div id="calendar" style="height: 400px; ></div>
+    <div id="calendar"  ></div>
 
   <div id="alrt" style="margin-left: 45%"></div>
 
